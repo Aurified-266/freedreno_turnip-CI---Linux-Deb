@@ -15,7 +15,7 @@ workdir="$(pwd)/turnip_workdir"
 magiskdir="$workdir/turnip_module"
 ndkver="android-ndk-r27d"
 ndk_base="$workdir/$ndkver"
-# STEP 7: Persistent NDK cache OUTSIDE the workdir so it survives wipes
+# Persistent NDK cache OUTSIDE the workdir so it survives wipes
 ndk_cache="$HOME/.cache/turnip_builder_ndk"
 sdkver="34"
 
