@@ -112,7 +112,7 @@ prepare_workdir(){
     mkdir -p "$workdir"
     mkdir -p "$ndk_cache"
 
-    # --- STEP 7: CACHED NDK DOWNLOAD ---
+    # --- CACHED NDK DOWNLOAD ---
     # The NDK (~700MB) is stored OUTSIDE the wiped workdir and reused between runs.
     # To force a fresh NDK, delete ~/.cache/turnip_builder_ndk
     if [ -d "$ndk_cache/$ndkver" ]; then
@@ -159,7 +159,7 @@ prepare_workdir(){
 }
 
 build_lib_for_android(){
-    # STEP 7: NDK now lives in the persistent cache, not inside the wiped workdir
+    # NDK now lives in the persistent cache, not inside the wiped workdir
     NDK_TOOLCHAIN="$ndk_cache/$ndkver/toolchains/llvm/prebuilt/linux-x86_64"
 
     if [ ! -d "$NDK_TOOLCHAIN" ]; then
