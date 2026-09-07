@@ -54,7 +54,7 @@ When switching drivers - if experiencing crashes - clear driver shader cache(s)
 
 - libfreedreno_drm Error: The perfcntrs/meson.build file referenced a variable that only exists when Gallium is enabled.
  
-- Fix: Added a sed command to pattern match comment out whichever lines of src/freedreno/perfcntrs/meson.build that exist causing failure - *before running Meson* - by searching for the libfreedreeno_drm string. / Now more reliably patched with string matching removal.
+- Fix: Added a command to comment out whichever lines of src/freedreno/perfcntrs/meson.build that cause failure - *before running Meson* - by searching for the libfreedreeno_drm string. / Now more reliably patched by searching for and commenting out failure signatures only.
  
 - Test Tool Failures: Debug tools like ir3_disasm and fd5_layout failed to link due to the host library issues.
  
